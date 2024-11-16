@@ -1,0 +1,42 @@
+<div class="flower-clock">
+    <!-- Capa de Horas -->
+    <div
+      class="petal hours"
+      *ngFor="let petal of [].constructor(12); let i = index"
+      [ngStyle]="getPetalStyle('hours', i)"
+    ></div>
+  
+    <!-- Capa de Minutos -->
+    <div
+      class="petal minutes"
+      *ngFor="let petal of [].constructor(12); let i = index"
+      [ngStyle]="getPetalStyle('minutes', i)"
+    ></div>
+  
+    <!-- Capa de Segundos -->
+    <div
+      class="petal seconds"
+      *ngFor="let petal of [].constructor(12); let i = index"
+      [ngStyle]="getPetalStyle('seconds', i)"
+    ></div>
+  
+    <!-- Marcadores de Horas -->
+    <div
+      class="hour-marker"
+      *ngFor="let num of [].constructor(12); let i = index"
+      [style.transform]="
+        'rotate(' + (i * 30 - 90) + 'deg) translate(130px) rotate(' + (-(i * 30 - 90)) + 'deg)'
+      "
+    >
+      {{ i === 0 ? 12 : i}}
+    </div>
+  
+    <!-- Centro del reloj -->
+    <div class="clock-center"></div>
+  
+    <!-- Manecillas del reloj -->
+    <div class="hand hour-hand" [ngStyle]="getHandStyle('hour')"></div>
+    <div class="hand minute-hand" [ngStyle]="getHandStyle('minute')"></div>
+    <div class="hand second-hand" [ngStyle]="getHandStyle('second')"></div>
+  </div>
+  

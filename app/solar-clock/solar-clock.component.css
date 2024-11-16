@@ -1,0 +1,78 @@
+.solar-clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: transparent; /* Fondo transparente */
+  margin: 0;
+  padding: 0;
+}
+
+.clock-face {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.gnomon {
+  position: absolute;
+  width: 6px;
+  height: 70px;
+  background-color: #333; /* Gnomon en gris oscuro */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%); /* Centrado vertical y desplazamiento hacia arriba */
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra en el gnomon */
+}
+
+.shadow {
+  position: absolute;
+  width: 6px;
+  height: 80px; /* Ajustar la altura de la sombra */
+  background-color: rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  top: 50%;
+  left: 50%;
+  transform-origin: top center;
+  transform: rotate(0deg);
+  border-radius: 3px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Difuminar sombra */
+  opacity: 0.7; /* Sombra más tenue */
+}
+
+.hour-mark {
+  position: absolute;
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(0deg); /* Centrado y rotación */
+}
+
+.hour-tick {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 4px;
+  height: 15px;
+  background-color: #666; /* Marca de hora en gris */
+  transform: translateX(-50%);
+}
+
+/* Ajustes de tamaño en pantallas pequeñas */
+@media (max-width: 600px) {
+  .clock-face {
+    width: 150px;
+    height: 150px;
+  }
+  .gnomon {
+    height: 60px;
+  }
+  .shadow {
+    height: 70px;
+  }
+}

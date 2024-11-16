@@ -1,0 +1,65 @@
+.liquid-clock {
+  position: relative;
+  width: 250px;
+  height: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.digital-clock {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.time {
+  color: #000;
+}
+
+.liquid-container {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.liquid-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.liquid {
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 204, 255, 0.7), rgba(0, 102, 204, 0.7));
+  transition: height 1s ease-in-out;
+  border-top: 2px solid rgba(0, 102, 204, 1);
+  border-radius: 5px;
+}
+
+.hour {
+  background: linear-gradient(to bottom, rgba(0, 204, 255, 0.7), rgba(0, 102, 204, 0.7));
+}
+
+.minute {
+  background: linear-gradient(to bottom, rgba(255, 204, 0, 0.7), rgba(204, 153, 0, 0.7));
+}
+
+.second {
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.7), rgba(204, 0, 0, 0.7));
+}
