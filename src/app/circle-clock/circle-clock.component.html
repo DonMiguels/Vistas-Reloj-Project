@@ -1,0 +1,23 @@
+<div class="circle-clock">
+    <div class="clock-container">
+        <!-- Círculos concéntricos para horas, minutos y segundos -->
+        <div
+          class="circle hours-circle"
+          [style.transform]="'rotate(' + getHoursRotation() + 'deg)'"
+        ></div>
+        <div
+          class="circle minutes-circle"
+          [style.transform]="'rotate(' + getMinutesRotation() + 'deg)'"
+        ></div>
+        <div
+          class="circle seconds-circle"
+          [style.transform]="'rotate(' + getSecondsRotation() + 'deg)'"
+        ></div>
+      
+        <!-- Hora digital al centro -->
+        <div class="digital-time">
+          {{ hours | number: '2.0' }}:{{ minutes | number: '2.0' }}:{{ seconds | number: '2.0' }}
+        </div>
+      </div>
+      
+</div>

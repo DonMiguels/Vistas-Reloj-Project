@@ -1,0 +1,15 @@
+<div class="normal-clock">
+  <div class="clock-face">
+    <!-- Marcas de la hora alrededor del reloj -->
+    <div *ngFor="let hour of [].constructor(12); let i = index" 
+         class="hour-mark" 
+         [style.transform]="'rotate(' + (i * 30) + 'deg) translateY(-140px)'">
+      <div class="hour-tick"></div>
+    </div>
+
+    <!-- Manecillas del reloj -->
+    <div class="hour-hand" [style.transform]="hourRotation"></div>
+    <div class="minute-hand" [style.transform]="minuteRotation"></div>
+    <div class="second-hand" [style.transform]="secondRotation"></div>
+  </div>
+</div>

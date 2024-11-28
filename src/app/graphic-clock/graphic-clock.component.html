@@ -1,0 +1,35 @@
+<div class="graphic-clock">
+    <div class="clock-container">
+
+      <!-- Barra de la Hora (Vertical) -->
+      <div class="time-bar-container">
+        <div class="label">Hora</div>
+        <div class="time-bar hour-bar">
+          <!-- Divisiones de la Hora -->
+          <div class="division" *ngFor="let div of hourDivisions"></div>
+          <div class="filler" [style.height]="hourHeight + '%'"></div>
+        </div>
+      </div>
+
+      <!-- Barra de los Minutos (Vertical) -->
+      <div class="time-bar-container">
+        <div class="label">Minuto</div>
+        <div class="time-bar minute-bar">
+          <!-- Divisiones de los Minutos -->
+          <div class="division" *ngFor="let div of minuteDivisions"></div>
+          <div class="filler" [style.height]="minuteHeight + '%'"></div>
+        </div>
+      </div>
+
+      <!-- Barra de los Segundos (Vertical) -->
+      <div class="time-bar-container">
+        <div class="label">Segundo</div>
+        <div class="time-bar second-bar">
+          <!-- Divisiones de los Segundos -->
+          <div class="division" *ngFor="let div of secondDivisions"></div>
+          <div class="filler" [style.height]="secondHeight + '%'"></div>
+        </div>
+      </div>
+
+    </div>
+</div>
